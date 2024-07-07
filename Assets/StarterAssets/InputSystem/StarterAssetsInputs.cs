@@ -12,6 +12,7 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool collect;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -43,6 +44,10 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+		public void OnCollect(InputValue value)
+		{
+            CollectInput(value.isPressed);
+		}
 #endif
 
 
@@ -64,6 +69,11 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+		public void CollectInput(bool newCollectInput)
+		{
+			Debug.Log("collect");
+            collect = newCollectInput;
 		}
 		
 		private void OnApplicationFocus(bool hasFocus)
