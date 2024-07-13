@@ -26,6 +26,7 @@ public class InGameUiManeger : MonoBehaviour
         {
             isEnable= !isEnable;
             InvetoryPanal.SetActive(isEnable);
+
         }
     }
 }

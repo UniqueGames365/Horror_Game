@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1876898837589843234}
   - component: {fileID: 3175247651693432776}
   - component: {fileID: 3259326757789093391}
+  - component: {fileID: 6507206442093764749}
   m_Layer: 5
   m_Name: 'itemUi '
   m_TagString: Untagged
@@ -90,6 +91,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626f05ef6b29ffe44b3dd00d74156911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemImage: {fileID: 5409857281896503999}
+  quantityText: {fileID: 6159872307343240778}
+  boderImage: {fileID: 3632868320686870863}
+--- !u!114 &6507206442093764749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527599493808171565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3259326757789093391}
+          m_TargetAssemblyTypeName: UiInvenoryItem, Assembly-CSharp
+          m_MethodName: OnPointerCliked
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3259326757789093391}
+          m_TargetAssemblyTypeName: UiInvenoryItem, Assembly-CSharp
+          m_MethodName: OnDrop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3259326757789093391}
+          m_TargetAssemblyTypeName: UiInvenoryItem, Assembly-CSharp
+          m_MethodName: OnBeginDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3259326757789093391}
+          m_TargetAssemblyTypeName: UiInvenoryItem, Assembly-CSharp
+          m_MethodName: OnEndDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &3787535263620506548
 GameObject:
   m_ObjectHideFlags: 0
