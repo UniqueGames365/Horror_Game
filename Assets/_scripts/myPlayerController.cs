@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class myPlayerController : MonoBehaviour
@@ -7,9 +9,11 @@ public class myPlayerController : MonoBehaviour
 
     public float playerReach = 3f;
     Intaractable currentNtractable;
+    public string message;
     // Update is called once per frame
     void Update()
     {
+        CheckIntacrion();
         if(Input.GetKeyDown(KeyCode.F) && currentNtractable != null)
         {
             currentNtractable.Interact();
@@ -24,8 +28,47 @@ public class myPlayerController : MonoBehaviour
         {
             if(hit.collider.tag=="Intractable")
             {
+                Intaractable newInteractable= hit.collider.GetComponent<Intaractable>();
 
+                if( currentNtractable &&  newInteractable != currentNtractable )
+                {
+                    currentNtractable.DisableOutline();
+                }
+                if(newInteractable.enabled)
+                {
+                    setNewCurrentIntactable(newInteractable);
+                }
+                else
+                {
+                    disableCurrentIntractable();
+                }
             }
+            else
+            {
+                disableCurrentIntractable();
+            }
+        }
+
+        else
+        {
+            disableCurrentIntractable();
+        }
+    }
+
+    private void setNewCurrentIntactable(Intaractable newInteractable)
+    {
+      currentNtractable = newInteractable;
+        currentNtractable.EnabaleOutline();
+        Hud_controller.instance.enebleIntraction(currentNtractable.message);
+    }
+
+    private void disableCurrentIntractable()
+    {
+        Hud_controller.instance.disableIntraction();
+        if (currentNtractable)
+        {
+            currentNtractable.DisableOutline();
+            currentNtractable = null;
         }
     }
 }

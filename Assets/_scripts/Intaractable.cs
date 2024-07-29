@@ -20,7 +20,7 @@ public class Intaractable : MonoBehaviour
         outline.enabled = false ;
     }
 
-    public void EnabaleOutline()
+    public void EnabaleOutline()    
     {
         outline.enabled = true ;    
     }
