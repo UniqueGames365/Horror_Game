@@ -58,7 +58,7 @@ public class myPlayerController : MonoBehaviour
     private void setNewCurrentIntactable(Intaractable newInteractable)
     {
       currentNtractable = newInteractable;
-        currentNtractable.EnabaleOutline();
+        currentNtractable.EnableOutline();
         Hud_controller.instance.enebleIntraction(currentNtractable.message);
     }
 

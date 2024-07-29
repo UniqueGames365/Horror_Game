@@ -2,27 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class Intaractable : MonoBehaviour
+
+public class Intaractable : MonoBehaviour, IColectableObserver
 {
-   
     Outline outline;
     public string message;
+    public CollectableItem _collectableItem;
 
     public UnityEvent onInteraction;
+
+    private UiInvenoryItem uiInventoryItem;
+
     void Start()
     {
         outline = GetComponent<Outline>();
         DisableOutline();
     }
 
-    public void DisableOutline()
+    public void SetUiInventoryItem(UiInvenoryItem inventoryItem)
     {
-        outline.enabled = false ;
+        uiInventoryItem = inventoryItem;
     }
 
-    public void EnabaleOutline()    
+    public void DisableOutline()
     {
-        outline.enabled = true ;    
+        outline.enabled = false;
+    }
+
+    public void EnableOutline()
+    {
+        outline.enabled = true;
     }
 
     public void Interact()
@@ -30,9 +39,24 @@ public class Intaractable : MonoBehaviour
         onInteraction.Invoke();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void OnDisable()
+    {
+        Debug.Log("disabled");
+        DisableItem();
+    }
+
+    public void DisableItem()
+    {
+        // Perform your disable logic here
+        //OnDisable();
+        if (uiInventoryItem != null)
+        {
+            uiInventoryItem.NotifyObservers();
+        }
     }
 }

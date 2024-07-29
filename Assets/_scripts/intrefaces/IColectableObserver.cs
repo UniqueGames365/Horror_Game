@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UiInventoryPage : MonoBehaviour
+public interface IColectableObserver
 {
-
-    
+    void OnDisable();
+    void DisableItem();
 }

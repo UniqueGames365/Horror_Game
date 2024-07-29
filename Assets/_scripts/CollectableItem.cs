@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Collectable Item", menuName = "Collectable Item")]
+[CreateAssetMenu(fileName = "New Collectable Item", menuName = "Collectable Item/Food")]
 public class CollectableItem : ScriptableObject
 {
     public string itemName;

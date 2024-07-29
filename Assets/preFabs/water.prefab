@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7264253804720880369}
   - component: {fileID: 7080424303307041111}
   m_Layer: 0
-  m_Name: picable
+  m_Name: water
   m_TagString: Intractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 73f75ed22e91334418e2312b6381fcd7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: 'pick up monny '
+  _collectableItem: {fileID: 11400000, guid: 4875ff9332e7a09429fd63551d47219b, type: 2}
   onInteraction:
     m_PersistentCalls:
       m_Calls:
