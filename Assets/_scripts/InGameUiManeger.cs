@@ -15,7 +15,7 @@ public class InGameUiManeger : MonoBehaviour
     {
         
         InvetoryPanal.SetActive(false);
-            invetoryUI.InitializedInventory(inventoySize);
+           // invetoryUI.InitializedInventory(inventoySize);
         
     }
 

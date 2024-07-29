@@ -13,7 +13,7 @@ public class UiInventoryPage : MonoBehaviour
 
     List<UiInvenoryItem> ListOfItems = new List<UiInvenoryItem>();
 
-    public void InitializedInventory(int inventorysize)
+   /* public void InitializedInventory(int inventorysize)
     {
         for (int i = 0; i < inventorysize; i++)
         {
@@ -27,7 +27,7 @@ public class UiInventoryPage : MonoBehaviour
             uiItem.OnItemEndDrag += HandleEndDrag;
             uiItem.OnRightMouseBtnCliked += HandleShowItemAction;
         }
-    }
+    }*/
 
     private void HandleShowItemAction(UiInvenoryItem item)
     {
