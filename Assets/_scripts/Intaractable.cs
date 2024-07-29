@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Intaractable : MonoBehaviour, IColectableObserver
+public enum ItemType
+{
+    Apple,
+    ChemicalOne
+}
+
+public class Intaractable : MonoBehaviour
 {
     Outline outline;
     public string message;
     public CollectableItem _collectableItem;
 
     public UnityEvent onInteraction;
-
+    
     private UiInvenoryItem uiInventoryItem;
 
     void Start()
@@ -44,19 +50,15 @@ public class Intaractable : MonoBehaviour, IColectableObserver
 
     }
 
-    public void OnDisable()
+    void OnDisable()
     {
-        Debug.Log("disabled");
-        DisableItem();
-    }
-
-    public void DisableItem()
-    {
-        // Perform your disable logic here
-        //OnDisable();
-        if (uiInventoryItem != null)
+        if (_collectableItem.itemName == ItemType.Apple.ToString())
         {
-            uiInventoryItem.NotifyObservers();
+            UiInvenoryItem.Instance.appleCount++;
+        }
+        else if(_collectableItem.itemName== ItemType.ChemicalOne.ToString())
+        {
+            UiInvenoryItem.Instance.chemOneCount++;
         }
     }
 }

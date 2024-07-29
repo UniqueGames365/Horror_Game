@@ -8,41 +8,21 @@ using UnityEngine.UI;
 
 public class UiInvenoryItem : MonoBehaviour
 {
-
-    private List<IColectableObserver> colectableObservers = new List<IColectableObserver>();
+    public static UiInvenoryItem Instance;
+    public  int appleCount=0;
+    public  int chemOneCount;
 
     private void Start()
     {
-        // Add initial observers if needed
+        Instance = this;
     }
 
     private void Update()
     {
-        // Update logic if needed
-    }
-
-    public void RegisterObserver(IColectableObserver observer)
-    {
-        if (!colectableObservers.Contains(observer))
-        {
-            colectableObservers.Add(observer);
-        }
-    }
-
-    public void UnregisterObserver(IColectableObserver observer)
-    {
-        if (colectableObservers.Contains(observer))
-        {
-            colectableObservers.Remove(observer);
-        }
-    }
-
-    public void NotifyObservers()
-    {
-        foreach (var observer in colectableObservers)
-        {
-            Debug.Log("Notifying observer");
-            observer.OnDisable();
-        }
+        if(appleCount!=0)
+            Debug.Log(appleCount);
+        else if (chemOneCount != 0)
+            Debug.Log(chemOneCount);
+            
     }
 }
