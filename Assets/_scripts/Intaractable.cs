@@ -52,6 +52,7 @@ public class Intaractable : MonoBehaviour
 
     void OnDisable()
     {
+    
         if (_collectableItem.itemName == ItemType.Apple.ToString())
         {
             UiInvenoryItem.Instance.appleCount++;

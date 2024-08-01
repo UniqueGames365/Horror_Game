@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b00aab2d85a474396c29c6c89453ee, type: 3}
   m_Name: watrerBottele
   m_EditorClassIdentifier: 
-  itemName: water
+  itemName: ChemicalOne
   itemIcon: {fileID: 0}
   itemValue: 15
   itemPrefab: {fileID: 0}

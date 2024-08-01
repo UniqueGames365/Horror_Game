@@ -10,7 +10,8 @@ public class UiInvenoryItem : MonoBehaviour
 {
     public static UiInvenoryItem Instance;
     public  int appleCount=0;
-    public  int chemOneCount;
+    public  int chemOneCount=0;
+    [SerializeField] private List<TMP_Text> colectableCountTexts; 
 
     private void Start()
     {
@@ -19,10 +20,9 @@ public class UiInvenoryItem : MonoBehaviour
 
     private void Update()
     {
-        if(appleCount!=0)
-            Debug.Log(appleCount);
-        else if (chemOneCount != 0)
-            Debug.Log(chemOneCount);
-            
+   
+         colectableCountTexts[0].text = appleCount.ToString();
+            colectableCountTexts[1].text = chemOneCount.ToString();
+
     }
 }
