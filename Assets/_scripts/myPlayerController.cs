@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class myPlayerController : MonoBehaviour
 {
 
     public float playerReach = 3f;
     Intaractable currentNtractable;
-    public string message;
+  //  public string message;
+    [SerializeField] private float health;
+    [SerializeField] private Image helthBar;
     // Update is called once per frame
     void Update()
     {
@@ -69,6 +72,17 @@ public class myPlayerController : MonoBehaviour
         {
             currentNtractable.DisableOutline();
             currentNtractable = null;
+        }
+    }
+
+  
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("chemicalArea"))
+        {
+            health = 0;
+            helthBar.fillAmount = health;
         }
     }
 }
