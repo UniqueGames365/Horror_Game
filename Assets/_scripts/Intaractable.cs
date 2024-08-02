@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public enum ItemType
 {
-    Apple,
+    Health,
     ChemicalOne
 }
 
@@ -53,7 +53,7 @@ public class Intaractable : MonoBehaviour
     void OnDisable()
     {
     
-        if (_collectableItem.itemName == ItemType.Apple.ToString())
+        if (_collectableItem.itemName == ItemType.Health.ToString())
         {
             UiInvenoryItem.Instance.appleCount++;
         }
