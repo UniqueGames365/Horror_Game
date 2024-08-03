@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Intractable
+  - chemicalArea
   layers:
   - Default
   - TransparentFX
