@@ -6,7 +6,7 @@ public class CollectableItem : ScriptableObject
 {
     public string itemName;
     public Sprite itemIcon;
-    //public string name;
+    public AudioClip AudioClip;
     public string description;
     public GameObject itemPrefab;
     // Add other properties as needed

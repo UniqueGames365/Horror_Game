@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: ChemicalOne
   itemIcon: {fileID: -972243133, guid: cd3f1e626fcd7f64196b0f4a41372561, type: 3}
+  AudioClip: {fileID: 8300000, guid: 67d90ed283d60e64c9d246b3804785e4, type: 3}
   description: 'chemical '
   itemPrefab: {fileID: 0}
