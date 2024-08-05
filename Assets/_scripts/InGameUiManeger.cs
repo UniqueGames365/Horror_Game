@@ -6,10 +6,17 @@ public class InGameUiManeger : MonoBehaviour
 {
     [SerializeField] private GameObject InvetoryPanal;
     private bool isEnable=false;
+
+    [SerializeField] private UiInventoryPage invetoryUI;
+
+    private int inventoySize = 10;
+
     void Start()
     {
         
         InvetoryPanal.SetActive(false);
+           // invetoryUI.InitializedInventory(inventoySize);
+        
     }
 
     // Update is called once per frame
@@ -19,6 +26,7 @@ public class InGameUiManeger : MonoBehaviour
         {
             isEnable= !isEnable;
             InvetoryPanal.SetActive(isEnable);
+
         }
     }
 }
