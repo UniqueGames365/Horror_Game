@@ -14,7 +14,7 @@ public class Intaractable : MonoBehaviour
     Outline outline;
     public string message;
     public CollectableItem _collectableItem;
-    public AudioSource _audioSource;
+    private AudioSource _audioSource;
     public UnityEvent onInteraction;
     
     private UiInvenoryItem uiInventoryItem;
@@ -43,15 +43,16 @@ public class Intaractable : MonoBehaviour
 
     public void Interact()
     {
+        //_audioSource.clip = _collectableItem.AudioClip;
+        Debug.Log("collected");
+      //  _audioSource.Play();
         onInteraction.Invoke();
-        _audioSource.clip = _collectableItem.AudioClip;
-        _audioSource.Play();
 
     }
 
     void Update()
     {
-
+       
     }
 
     void OnDisable()
