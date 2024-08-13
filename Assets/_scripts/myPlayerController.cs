@@ -1,3 +1,4 @@
+using StarterAssets;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,10 +11,14 @@ public class myPlayerController : MonoBehaviour
 
     public float playerReach = 3f;
     Intaractable currentNtractable;
-  //  public string message;
+
     [SerializeField] private float health;
     [SerializeField] private Image helthBar;
-    // Update is called once per frame
+
+    private FirstPersonController firstPersonController;
+
+   
+  
     void Update()
     {
         CheckIntacrion();

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Threading.Tasks;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -51,8 +52,10 @@ namespace StarterAssets
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
 
-		// cinemachine
-		private float _cinemachineTargetPitch;
+		private AudioSource audioSource;
+        
+        // cinemachine
+        private float _cinemachineTargetPitch;
 
 		// player
 		private float _speed;
@@ -73,6 +76,13 @@ namespace StarterAssets
 		private GameObject _mainCamera;
 
 		private const float _threshold = 0.01f;
+		private bool isMove= false;	
+		private bool isplaying= false;
+
+		private PlayerFootsteps _footstepsScript;
+
+	
+		
 
 		private bool IsCurrentDeviceMouse
 		{
@@ -108,7 +118,12 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
-		}
+
+            audioSource= gameObject.GetComponent<AudioSource>();
+            _footstepsScript= gameObject.GetComponent<PlayerFootsteps>();
+
+
+        }
 
 		private void Update()
 		{
@@ -153,8 +168,9 @@ namespace StarterAssets
 
 		private void Move()
 		{
-			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			
+            // set target speed based on move speed, sprint speed and if sprint is pressed
+            float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -196,7 +212,40 @@ namespace StarterAssets
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+
+			//play foot step sounds
+
+			_footstepsScript.footStepController(_speed);
+            /*
+                        if (_speed !=0 && !isplaying)
+                        {
+                            _= _footstepsScript.startFootStepplayer();
+                        }
+                        if (_speed == 0 && audioSource.isPlaying)
+                        {
+                            audioSource.Stop();
+                        }*/
+
+
+        }
+
+		/*private async Task startFootStepplayer()
+		{
+			isplaying= true;
+			await FootStepPlayer();
+			isplaying= false;
 		}
+
+		private async Task<bool> FootStepPlayer()
+		{
+			audioSource.Play();
+			while (audioSource.isPlaying)
+			{
+				await Task.Yield();
+			}
+			return true;
+
+        }*/
 
 		private void JumpAndGravity()
 		{
