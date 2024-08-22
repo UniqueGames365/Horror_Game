@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: cole
   m_EditorClassIdentifier: 
   itemName: 2
-  itemIcon: {fileID: 0}
-  description: dsfdf
+  itemIcon: {fileID: 881348007, guid: cd3f1e626fcd7f64196b0f4a41372561, type: 3}
+  itemValue: 0
   itemPrefab: {fileID: 0}
+  description: dsfdf
+  AudioClip: {fileID: 0}

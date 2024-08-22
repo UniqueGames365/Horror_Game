@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Keys
   m_EditorClassIdentifier: 
   itemName: keys
-  itemIcon: {fileID: 0}
-  description: 'Keys can use open the droos '
+  itemIcon: {fileID: 1774272699, guid: cd3f1e626fcd7f64196b0f4a41372561, type: 3}
+  itemValue: 0
   itemPrefab: {fileID: 0}
+  description: 'Keys can use open the droos '
+  AudioClip: {fileID: 0}
