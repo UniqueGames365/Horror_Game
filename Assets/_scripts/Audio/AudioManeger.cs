@@ -18,5 +18,7 @@ public class AudioManeger : MonoBehaviour
     {
         AudioSource.clip=ColectablaudioClip;
         AudioSource.Play();
+
+
     }
 }

@@ -216,36 +216,9 @@ namespace StarterAssets
 			//play foot step sounds
 
 			_footstepsScript.footStepController(_speed);
-            /*
-                        if (_speed !=0 && !isplaying)
-                        {
-                            _= _footstepsScript.startFootStepplayer();
-                        }
-                        if (_speed == 0 && audioSource.isPlaying)
-                        {
-                            audioSource.Stop();
-                        }*/
-
 
         }
 
-		/*private async Task startFootStepplayer()
-		{
-			isplaying= true;
-			await FootStepPlayer();
-			isplaying= false;
-		}
-
-		private async Task<bool> FootStepPlayer()
-		{
-			audioSource.Play();
-			while (audioSource.isPlaying)
-			{
-				await Task.Yield();
-			}
-			return true;
-
-        }*/
 
 		private void JumpAndGravity()
 		{

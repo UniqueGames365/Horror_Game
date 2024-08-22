@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class myPlayerController : MonoBehaviour
@@ -26,6 +27,9 @@ public class myPlayerController : MonoBehaviour
         {
             currentNtractable.Interact();
         }
+
+
+        
     }
 
     void CheckIntacrion()

@@ -25,6 +25,6 @@ public class torchController : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(screenMidpoint);
 
         // Rotate the torch to follow the direction of the ray
-        transform.up =ray.direction;
+        transform.up =ray.direction; 
     }
 }
