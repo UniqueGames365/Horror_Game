@@ -1,0 +1,11 @@
+Name: Building_1
+Version: 2016
+Preview: Yes
+Units: Millimeters
+Dimension: 21723.4 x 21462.0 x 13398.9
+Polys: 9 506
+XForm: Yes
+Box Trick: Yes
+Model Parts: 11
+Render: Corona
+Formats: 3Ds Max 2016, OBJ, FBX
