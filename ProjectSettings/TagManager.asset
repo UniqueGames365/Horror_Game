@@ -7,8 +7,9 @@ TagManager:
   - CinemachineTarget
   - Intractable
   - chemicalArea
-  - BWood
   - BMud
+  - BWood
+  - Detector
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Wood
+  - 
   - 
   - 
   - 
