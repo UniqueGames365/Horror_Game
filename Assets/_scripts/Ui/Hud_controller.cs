@@ -8,7 +8,15 @@ public class Hud_controller : MonoBehaviour
    public static Hud_controller instance;
     private void Awake()
     {
-        instance = this;
+        if(instance == null)
+        {
+            instance = this;
+
+        }
+        else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
     [SerializeField] private TMP_Text interactionText;
 
