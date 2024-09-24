@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class myPlayerController : MonoBehaviour
 {
 
-    public float playerReach = 3f;
+    public float playerReach = 5f;
     Intaractable currentNtractable;
 
     [SerializeField] private float health;

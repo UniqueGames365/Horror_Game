@@ -13,6 +13,8 @@ public class Door : MonoBehaviour
     public UnityEvent OnDoorOpen;
     bool isOpen= false;
     bool triggerZone= false;
+
+    [SerializeField] private string message;
     void Start()
     {
         //save closed rotation
@@ -65,6 +67,7 @@ public class Door : MonoBehaviour
         {
             triggerZone = true;
             Debug.Log("Enter TriggerZone");
+            Hud_controller.instance.enebleIntraction(message);
 
         }
     }
@@ -75,6 +78,8 @@ public class Door : MonoBehaviour
         {
             triggerZone = false;
             Debug.Log("Exit TriggerZone");
+            Hud_controller.instance.disableIntraction();
+
 
         }
     }

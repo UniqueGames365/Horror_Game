@@ -43,9 +43,8 @@ public class Intaractable : MonoBehaviour
 
     public void Interact()
     {
-        //_audioSource.clip = _collectableItem.AudioClip;
+   
         Debug.Log("collected");
-      //  _audioSource.Play();
         onInteraction.Invoke();
 
     }

@@ -12,7 +12,7 @@ public class Hud_controller : MonoBehaviour
     }
     [SerializeField] private TMP_Text interactionText;
 
-    public void enebleIntraction( string text)
+    public void enebleIntraction(string text)
     {
         interactionText.text = text+ "(F)";
         interactionText.gameObject.SetActive(true);
