@@ -13,14 +13,14 @@ public class UiInventoryPage : MonoBehaviour
     [SerializeField] private Image _itemImage;
     [SerializeField] private CollectableItem _CollectableItem;
 
-    [SerializeField] public GameObject[] _leftHandItems;
+   // [SerializeField] public GameObject[] _leftHandItems;
 
     private void Start()
     {
-        for (int i = 0; i < _leftHandItems.Length; i++)
+       /* for (int i = 0; i < _leftHandItems.Length; i++)
         {
             _leftHandItems[i].SetActive(false);
-        }
+        }*/
     }
 
     public void clicked(int index)
@@ -36,14 +36,6 @@ public class UiInventoryPage : MonoBehaviour
                 myPlayerController.instance.getHelathPack();
                 break;
 
-            case 1:
-                _leftHandItems[0].SetActive(true);
-                aciveSelection(0);
-                break;
-            case 2:
-                _leftHandItems[1].SetActive(true);
-                aciveSelection(1);
-                break;
 
         }
      
@@ -51,7 +43,7 @@ public class UiInventoryPage : MonoBehaviour
 
     private void aciveSelection(int selectedInedx)
     {
-        for (int i = 0; i < _leftHandItems.Length; i++)
+     /*   for (int i = 0; i < _leftHandItems.Length; i++)
         {
             if (i == selectedInedx)
             {
@@ -59,6 +51,6 @@ public class UiInventoryPage : MonoBehaviour
             }
 
             _leftHandItems[i].SetActive(false);
-        }
+        }*/
     }
 }
